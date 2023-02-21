@@ -45,7 +45,8 @@
  
  <p> Update using this cmd : <code> apt update </code> </p>
  <p> Install Git Using this cmd : <code> apt install git </code> </p>
- <p> change directory to metasploit folder using this cmd : <code> cd metasploit</code> </p>
+ <p> After install git type this cmd : <code>git clone https://github.com/snapAPP/metasploit.git<code> </p>
+ <p> Then change directory to metasploit folder using this cmd : <code> cd metasploit</code> </p>
  <p> Type this cmd : <code> chmod +x install.sh </code> </p>
  <p> Type the following cmd : <code> ./install.sh </code> </p>
  <p> Then wait for 4-5 mintues it will automatically install Metasploit Framework </p>
