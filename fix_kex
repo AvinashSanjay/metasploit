@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+green='\033[1;32m'
+red='\033[1;31m'
+cyan='\033[1;96m'
+
+function get_arch() {
+    printf "${green}[*] Checking device architecture ..."
+    case $(getprop ro.product.cpu.abi) in
+        arm64-v8a)
+            SYS_ARCH=arm64
+            ;;
+        armeabi|armeabi-v7a)
+            SYS_ARCH=armhf
+            ;;
+        *)
+            unsupported_arch
+            ;;
+    esac
+}
+cd $HOME
+get_arch
+cd kali-$SYS_ARCH/bin
+chk=(ls kex) 
+if [ -f $HOME/kali-$SYS_ARCH/bin/kex ]; then
+  sed -i s/"nohup vncserver \$\SCREEN"/"nohup vncserver -name:\$\SCREEN -localhost no \$\SCREEN"/ kex
+  printf "${red}Modifications Done..."
+  printf "${green}Pugazh can start ${cyan}nh kex start and connect using your ip address find using ${red}ifconfig"
+fi
+else
+  printf "${red}Sorry Pugazh Some shit goes wrong try reinstalling ${green}nethunter" 
