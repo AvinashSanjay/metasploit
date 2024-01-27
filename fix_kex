@@ -29,3 +29,4 @@ if [ -f $HOME/kali-$SYS_ARCH/bin/kex ]; then
 fi
 else
   printf "${red}Sorry Pugazh Some shit goes wrong try reinstalling ${green}nethunter" 
+fi
