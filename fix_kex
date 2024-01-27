@@ -27,6 +27,3 @@ if [ -f $HOME/kali-$SYS_ARCH/bin/kex ]; then
   printf "${red}Modifications Done..."
   printf "${green}Pugazh can start ${cyan}nh kex start and connect using your ip address find using ${red}ifconfig"
 fi
-else
-  printf "${red}Sorry Pugazh Some shit goes wrong try reinstalling ${green}nethunter" 
-fi
